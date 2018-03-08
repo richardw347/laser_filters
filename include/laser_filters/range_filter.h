@@ -62,12 +62,12 @@ public:
     getParam("use_message_range_limits", use_message_range_limits_);
 
     // work around the not implemented getParam(std::string name, float& value) method
-    double temp_replacement_value = std::numeric_limits<double>::quiet_NaN();
+    double temp_replacement_value = std::numeric_limits<float>::infinity();
     getParam("lower_replacement_value", temp_replacement_value);
     lower_replacement_value_ = static_cast<float>(temp_replacement_value);
 
     // work around the not implemented getParam(std::string name, float& value) method
-    temp_replacement_value = std::numeric_limits<double>::quiet_NaN();
+    temp_replacement_value = std::numeric_limits<float>::infinity();
     getParam("upper_replacement_value", temp_replacement_value);
     upper_replacement_value_ = static_cast<float>(temp_replacement_value);
 
